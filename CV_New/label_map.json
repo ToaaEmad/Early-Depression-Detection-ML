@@ -1,0 +1,16 @@
+{
+  "idx2label": {
+    "0": "sad",
+    "1": "neutral",
+    "2": "fear",
+    "3": "disgust"
+  },
+  "display_name": {
+    "sad": "Sadness",
+    "neutral": "Neutral",
+    "fear": "Anxiety (proxy: Fear)",
+    "disgust": "Disgust"
+  },
+  "img_size": 224,
+  "backbone": "tf_efficientnet_b4_ns"
+}
