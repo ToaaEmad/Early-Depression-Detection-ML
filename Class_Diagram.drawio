@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-04T00:00:00.000Z" agent="Manus" version="21.0.0" type="device">
+  <diagram id="class-diagram" name="Class Diagram - System Structure">
+    <mxGraphModel dx="1600" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Class Diagram - AI-Based Mental Health Risk Detection System" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="600" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Class: User -->
+        <mxCell id="c1" value="&lt;b&gt;User&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- userId: int&lt;br&gt;- username: String&lt;br&gt;- email: String&lt;br&gt;- passwordHash: String&lt;br&gt;- role: String&lt;br&gt;- createdAt: DateTime&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ register(): void&lt;br&gt;+ login(): AuthToken&lt;br&gt;+ logout(): void&lt;br&gt;+ getProfile(): UserProfile&lt;br&gt;+ updateProfile(): void&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="60" y="100" width="220" height="260" as="geometry" />
+        </mxCell>
+
+        <!-- Class: Admin (inherits User) -->
+        <mxCell id="c2" value="&lt;b&gt;Admin&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- adminLevel: int&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ manageUsers(): void&lt;br&gt;+ viewSystemLogs(): List&lt;br&gt;+ configureModel(): void&lt;br&gt;+ viewAnalytics(): Report&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="60" y="440" width="220" height="200" as="geometry" />
+        </mxCell>
+
+        <!-- Class: AnalysisRequest -->
+        <mxCell id="c3" value="&lt;b&gt;AnalysisRequest&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- requestId: int&lt;br&gt;- userId: int&lt;br&gt;- inputText: String&lt;br&gt;- status: String&lt;br&gt;- createdAt: DateTime&lt;br&gt;- completedAt: DateTime&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ submit(): void&lt;br&gt;+ validate(): boolean&lt;br&gt;+ getStatus(): String&lt;br&gt;+ cancel(): void&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="380" y="100" width="220" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- Class: PredictionResult -->
+        <mxCell id="c4" value="&lt;b&gt;PredictionResult&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- resultId: int&lt;br&gt;- requestId: int&lt;br&gt;- riskLevel: String&lt;br&gt;- confidenceScore: float&lt;br&gt;- modelUsed: String&lt;br&gt;- predictedAt: DateTime&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ getRiskLevel(): String&lt;br&gt;+ getConfidence(): float&lt;br&gt;+ toJSON(): String&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="380" y="460" width="220" height="270" as="geometry" />
+        </mxCell>
+
+        <!-- Class: ExplanationResult -->
+        <mxCell id="c5" value="&lt;b&gt;ExplanationResult&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- explanationId: int&lt;br&gt;- resultId: int&lt;br&gt;- shapValues: List&amp;lt;float&amp;gt;&lt;br&gt;- topFeatures: List&amp;lt;String&amp;gt;&lt;br&gt;- attentionWeights: List&amp;lt;float&amp;gt;&lt;br&gt;- generatedAt: DateTime&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ getTopFeatures(): List&lt;br&gt;+ getSHAPPlot(): Image&lt;br&gt;+ toJSON(): String&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="380" y="800" width="240" height="280" as="geometry" />
+        </mxCell>
+
+        <!-- Class: TextPreprocessor -->
+        <mxCell id="c6" value="&lt;b&gt;TextPreprocessor&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- stopwords: List&amp;lt;String&amp;gt;&lt;br&gt;- tokenizer: Tokenizer&lt;br&gt;- maxLength: int&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ clean(text: String): String&lt;br&gt;+ tokenize(text: String): List&lt;br&gt;+ removeStopwords(tokens: List): List&lt;br&gt;+ extractFeatures(text: String): FeatureVector&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="700" y="100" width="280" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Class: RiskPredictionModel -->
+        <mxCell id="c7" value="&lt;b&gt;RiskPredictionModel&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- modelId: String&lt;br&gt;- modelType: String&lt;br&gt;- version: String&lt;br&gt;- accuracy: float&lt;br&gt;- isActive: boolean&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ predict(features: FeatureVector): PredictionResult&lt;br&gt;+ loadModel(path: String): void&lt;br&gt;+ getModelInfo(): ModelMetadata&lt;br&gt;+ evaluate(testData: Dataset): Metrics&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="700" y="410" width="300" height="270" as="geometry" />
+        </mxCell>
+
+        <!-- Class: ExplainabilityService -->
+        <mxCell id="c8" value="&lt;b&gt;ExplainabilityService&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- method: String&lt;br&gt;- numFeatures: int&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ computeSHAP(model, input): SHAPValues&lt;br&gt;+ getAttentionWeights(model): Weights&lt;br&gt;+ generateExplanation(prediction): ExplanationResult&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="700" y="750" width="300" height="210" as="geometry" />
+        </mxCell>
+
+        <!-- Class: APIController -->
+        <mxCell id="c9" value="&lt;b&gt;APIController&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- baseURL: String&lt;br&gt;- version: String&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ handleLogin(req): Response&lt;br&gt;+ handleAnalyze(req): Response&lt;br&gt;+ handleGetResults(req): Response&lt;br&gt;+ handleGetHistory(req): Response&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="100" width="260" height="230" as="geometry" />
+        </mxCell>
+
+        <!-- Class: DatabaseManager -->
+        <mxCell id="c10" value="&lt;b&gt;DatabaseManager&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- connectionString: String&lt;br&gt;- pool: ConnectionPool&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ connect(): void&lt;br&gt;+ disconnect(): void&lt;br&gt;+ saveUser(user: User): void&lt;br&gt;+ saveResult(result: PredictionResult): void&lt;br&gt;+ getHistory(userId: int): List&lt;br&gt;+ query(sql: String): ResultSet&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="410" width="280" height="270" as="geometry" />
+        </mxCell>
+
+        <!-- Class: Dashboard -->
+        <mxCell id="c11" value="&lt;b&gt;Dashboard&lt;/b&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;- userId: int&lt;br&gt;- charts: List&amp;lt;Chart&amp;gt;&lt;br&gt;- riskHistory: List&amp;lt;PredictionResult&amp;gt;&lt;/div&gt;&lt;hr&gt;&lt;div style='text-align:left;padding:4px;'&gt;+ loadData(): void&lt;br&gt;+ renderCharts(): void&lt;br&gt;+ displayRiskTrend(): Chart&lt;br&gt;+ exportReport(): PDF&lt;/div&gt;" style="shape=mxgraph.unified_modeling_language.class;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;verticalAlign=top;fontSize=11;overflow=fill;" vertex="1" parent="1">
+          <mxGeometry x="1100" y="750" width="250" height="240" as="geometry" />
+        </mxCell>
+
+        <!-- Relationships -->
+
+        <!-- Inheritance: Admin extends User -->
+        <mxCell id="r1" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;endSize=16;rounded=1;" edge="1" source="c2" target="c1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Association: User creates AnalysisRequest (1 to many) -->
+        <mxCell id="r2" value="creates &#xa;1..*" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;rounded=1;exitX=1;exitY=0.3;entryX=0;entryY=0.3;" edge="1" source="c1" target="c3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Association: AnalysisRequest has PredictionResult (1 to 1) -->
+        <mxCell id="r3" value="produces&#xa;1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="c3" target="c4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Association: PredictionResult has ExplanationResult (1 to 1) -->
+        <mxCell id="r4" value="explained by&#xa;1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="c4" target="c5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dependency: APIController uses TextPreprocessor -->
+        <mxCell id="r5" value="&lt;&lt;uses&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;rounded=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" source="c9" target="c6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dependency: APIController uses RiskPredictionModel -->
+        <mxCell id="r6" value="&lt;&lt;uses&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;rounded=1;exitX=0;exitY=0.7;entryX=1;entryY=0.3;" edge="1" source="c9" target="c7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dependency: APIController uses DatabaseManager -->
+        <mxCell id="r7" value="&lt;&lt;uses&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="c9" target="c10" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dependency: RiskPredictionModel uses ExplainabilityService -->
+        <mxCell id="r8" value="&lt;&lt;uses&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="c7" target="c8" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Association: Dashboard displays PredictionResult -->
+        <mxCell id="r9" value="displays&#xa;0..*" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;rounded=1;exitX=0;exitY=0.3;entryX=1;entryY=0.7;" edge="1" source="c11" target="c4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Association: User views Dashboard -->
+        <mxCell id="r10" value="views&#xa;1" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;rounded=1;exitX=1;exitY=0.8;entryX=0;entryY=0.5;" edge="1" source="c1" target="c11" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="308" />
+              <mxPoint x="320" y="870" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Dependency: TextPreprocessor feeds RiskPredictionModel -->
+        <mxCell id="r11" value="&lt;&lt;feeds&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;rounded=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" source="c6" target="c7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dependency: ExplainabilityService produces ExplanationResult -->
+        <mxCell id="r12" value="&lt;&lt;produces&gt;&gt;" style="edgeStyle=orthogonalEdgeStyle;endArrow=open;endFill=0;dashed=1;rounded=1;exitX=0;exitY=0.7;entryX=1;entryY=0.5;" edge="1" source="c8" target="c5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

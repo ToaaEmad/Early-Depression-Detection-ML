@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-04T00:00:00.000Z" agent="Manus" version="21.0.0" type="device">
+  <diagram id="activity-diagram" name="Activity Diagram - User Analysis Workflow">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1400" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Title -->
+        <mxCell id="title" value="Activity Diagram - Mental Health Risk Analysis Workflow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="20" width="500" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Swimlane: User -->
+        <mxCell id="lane1" value="User / Analyst" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="300" height="1250" as="geometry" />
+        </mxCell>
+
+        <!-- Swimlane: System -->
+        <mxCell id="lane2" value="System (Backend + AI)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="380" y="80" width="340" height="1250" as="geometry" />
+        </mxCell>
+
+        <!-- Swimlane: Database -->
+        <mxCell id="lane3" value="Database" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;horizontal=0;" vertex="1" parent="1">
+          <mxGeometry x="760" y="80" width="260" height="1250" as="geometry" />
+        </mxCell>
+
+        <!-- Start Node -->
+        <mxCell id="start" value="" style="ellipse;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="170" y="120" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Open Application -->
+        <mxCell id="a1" value="Open Application" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="180" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Enter Login Credentials -->
+        <mxCell id="a2" value="Enter Login&#xa;Credentials" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="260" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Validate Credentials -->
+        <mxCell id="a3" value="Validate User&#xa;Credentials" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="480" y="260" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Query User DB -->
+        <mxCell id="a3b" value="Query User&#xa;Records" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="820" y="260" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: Valid? -->
+        <mxCell id="d1" value="Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="515" y="340" width="80" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Display Error -->
+        <mxCell id="a4" value="Display Error&#xa;Message" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="345" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Display Dashboard -->
+        <mxCell id="a5" value="Display Dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="440" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Enter Text for Analysis -->
+        <mxCell id="a6" value="Enter Text / Paste&#xa;Social Media Post" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="520" width="140" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Submit Analysis Request -->
+        <mxCell id="a7" value="Submit Analysis&#xa;Request" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="610" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Validate Input -->
+        <mxCell id="a8" value="Validate Input&#xa;Text" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="480" y="610" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: Input Valid? -->
+        <mxCell id="d2" value="Input&#xa;Valid?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="515" y="690" width="80" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Preprocess Text -->
+        <mxCell id="a9" value="Preprocess Text&#xa;(Tokenize, Clean,&#xa;Remove Stopwords)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="480" y="790" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Run ML Model -->
+        <mxCell id="a10" value="Run Risk Prediction&#xa;Model (BERT/LSTM/&#xa;XGBoost)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="480" y="880" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Generate SHAP Explanation -->
+        <mxCell id="a11" value="Generate SHAP&#xa;Explanation &amp;&#xa;Feature Importance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="480" y="970" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Store Results -->
+        <mxCell id="a12" value="Store Analysis&#xa;Results" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="820" y="970" width="140" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Activity: Display Results -->
+        <mxCell id="a13" value="Display Risk Level,&#xa;Explanation &amp;&#xa;Dashboard Charts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1060" width="150" height="55" as="geometry" />
+        </mxCell>
+
+        <!-- Decision: Analyze More? -->
+        <mxCell id="d3" value="Analyze&#xa;More?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="150" y="1160" width="80" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- End Node -->
+        <mxCell id="end" value="" style="ellipse;html=1;shape=mxgraph.flowchart.terminate;whiteSpace=wrap;fillColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="175" y="1270" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- Edges / Flows -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="start" target="a1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a1" target="a2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a2" target="a3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e3b" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a3" target="a3b" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a3b" target="d1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="330" />
+              <mxPoint x="555" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e5" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="d1" target="a4" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="400" y="370" />
+              <mxPoint x="400" y="365" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e5b" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a4" target="a2" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="365" />
+              <mxPoint x="80" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e6" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="d1" target="a5" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="555" y="420" />
+              <mxPoint x="300" y="420" />
+              <mxPoint x="300" y="460" />
+              <mxPoint x="190" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a5" target="a6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a6" target="a7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a7" target="a8" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a8" target="d2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e11" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="d2" target="a6" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="720" />
+              <mxPoint x="420" y="545" />
+              <mxPoint x="190" y="545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e12" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="d2" target="a9" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e13" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a9" target="a10" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a10" target="a11" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a11" target="a12" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a12" target="a13" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="890" y="1087" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="a13" target="d3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <mxCell id="e18" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="d3" target="a6" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="1190" />
+              <mxPoint x="60" y="545" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="e19" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="d3" target="end" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

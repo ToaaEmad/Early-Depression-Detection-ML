@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2026-07-04T00:00:00.000Z" agent="Manus" version="21.0.0" type="device">
+  <diagram id="dfd-level-1" name="DFD Level 1 - Detailed">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- External Entity: User/Analyst -->
+        <mxCell id="ext1" value="User / Analyst" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- External Entity: Admin -->
+        <mxCell id="ext2" value="Admin" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="100" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- External Entity: Dataset Source -->
+        <mxCell id="ext3" value="Social Media&#xa;Dataset Source" style="shape=rectangle;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="40" y="700" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- Process 1: Authentication -->
+        <mxCell id="p1" value="1.0&#xa;User&#xa;Authentication" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="320" y="200" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Process 2: Text Submission & Validation -->
+        <mxCell id="p2" value="2.0&#xa;Text Submission&#xa;&amp; Validation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="320" y="380" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Process 3: Text Preprocessing -->
+        <mxCell id="p3" value="3.0&#xa;Text&#xa;Preprocessing" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="380" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Process 4: Risk Prediction -->
+        <mxCell id="p4" value="4.0&#xa;Risk&#xa;Prediction" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="880" y="380" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Process 5: Explainability Generation -->
+        <mxCell id="p5" value="5.0&#xa;Explainability&#xa;Generation" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="380" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Process 6: Result Visualization -->
+        <mxCell id="p6" value="6.0&#xa;Result&#xa;Visualization" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="200" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Process 7: Model Training -->
+        <mxCell id="p7" value="7.0&#xa;Model&#xa;Training" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="600" y="650" width="160" height="100" as="geometry" />
+        </mxCell>
+
+        <!-- Data Store: User Database -->
+        <mxCell id="ds1" value="D1 | User Database" style="shape=partialRectangle;top=0;left=0;right=0;bottom=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="60" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Data Store: Analysis Results -->
+        <mxCell id="ds2" value="D2 | Analysis Results Store" style="shape=partialRectangle;top=0;left=0;right=0;bottom=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="870" y="560" width="200" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Data Store: Trained Models -->
+        <mxCell id="ds3" value="D3 | Trained Model Repository" style="shape=partialRectangle;top=0;left=0;right=0;bottom=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="720" width="210" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Data Store: Dataset Store -->
+        <mxCell id="ds4" value="D4 | Dataset Store" style="shape=partialRectangle;top=0;left=0;right=0;bottom=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=11;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="320" y="780" width="180" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- Flows -->
+
+        <!-- User -> P1: Login Credentials -->
+        <mxCell id="f1" value="Login Credentials" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="ext1" target="p1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P1 -> User: Auth Token / Session -->
+        <mxCell id="f2" value="Auth Token" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p1" target="ext1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="280" />
+              <mxPoint x="260" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P1 -> DS1: Verify/Store User -->
+        <mxCell id="f3" value="User Data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p1" target="ds1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- User -> P2: Text/Posts -->
+        <mxCell id="f4" value="Text / Social Media Posts" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="ext1" target="p2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P2 -> P3: Validated Text -->
+        <mxCell id="f5" value="Validated Text" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p2" target="p3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P3 -> P4: Preprocessed Features -->
+        <mxCell id="f6" value="Preprocessed Features&#xa;(Tokenized, Cleaned)" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p3" target="p4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P4 -> P5: Prediction + Internal Data -->
+        <mxCell id="f7" value="Prediction Data &amp;&#xa;Model Internals" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p4" target="p5" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P4 -> DS2: Store Prediction -->
+        <mxCell id="f8" value="Prediction Result" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p4" target="ds2" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P5 -> P6: Explanation + Risk Level -->
+        <mxCell id="f9" value="Risk Level +&#xa;SHAP Explanation" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p5" target="p6" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P5 -> DS2: Store Explanation -->
+        <mxCell id="f10" value="Explanation Data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p5" target="ds2" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1220" y="560" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- P6 -> User: Dashboard/Results -->
+        <mxCell id="f11" value="Dashboard View &amp;&#xa;Risk Assessment Report" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p6" target="ext1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1400" y="250" />
+              <mxPoint x="1400" y="50" />
+              <mxPoint x="110" y="50" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- DS3 -> P4: Trained Model -->
+        <mxCell id="f12" value="Trained Model" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="ds3" target="p4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Dataset Source -> DS4 -->
+        <mxCell id="f13" value="Raw Datasets" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="ext3" target="ds4" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- DS4 -> P7: Training Data -->
+        <mxCell id="f14" value="Cleaned Training Data" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="ds4" target="p7" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- P7 -> DS3: Trained Model -->
+        <mxCell id="f15" value="Trained Model Artifact" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="p7" target="ds3" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Admin -> P1: Manage Users -->
+        <mxCell id="f16" value="User Management&#xa;Commands" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="ext2" target="p1" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Admin -> P7: Model Config -->
+        <mxCell id="f17" value="Model Configuration&#xa;&amp; Hyperparameters" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" edge="1" source="ext2" target="p7" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="110" y="650" />
+              <mxPoint x="110" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Title -->
+        <mxCell id="title1" value="DFD Level 1 - Detailed Data Flow Diagram&#xa;AI-Based Early Detection System for Mental Health Risk" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="900" width="500" height="60" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
