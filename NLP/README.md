@@ -310,33 +310,6 @@ Example Request
 }
 ```
 
----
-
-# Installation
-
-Clone the repository
-
-```bash
-git clone https://github.com/your_username/Mental_Health_Classification.git
-```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-Run FastAPI
-
-```bash
-uvicorn app:app --reload
-```
-
-Open
-
-```
-http://127.0.0.1:8000/docs
-```
 
 ---
 
@@ -406,9 +379,3 @@ http://127.0.0.1:8000/docs
 
 Artificial Intelligence Engineer
 
-
-LinkedIn: https://linkedin.com/in/your_profile
-
----
-
-⭐ If you found this project useful, consider giving it a star on GitHub.
