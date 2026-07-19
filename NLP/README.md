@@ -329,38 +329,6 @@ Example Request
 
 ---
 
-# Results
-
-## Model Comparison Dashboard
-
-> **Insert Dashboard Screenshot Here**
-
----
-
-## Confusion Matrix
-
-> **Insert Confusion Matrix Image Here**
-
----
-
-## Learning Curves
-
-> **Insert Learning Curves Here**
-
----
-
-## FastAPI Swagger
-
-> **Insert Swagger Screenshot Here**
-
----
-
-## Frontend Integration
-
-> **Insert Frontend Screenshot Here**
-
----
-
 # Future Improvements
 
 - Azure Cloud Deployment
